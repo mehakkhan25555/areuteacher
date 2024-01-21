@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Radio Button Example</title>
+  <style>
+    /* CSS Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      background: url("images/kaiif.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 5px 5px 5px rgba(142, 22, 164, 0.564);
+      border-radius: 5px;
+      border-radius: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .submit-button {
+      margin-top: 15px;
+      text-align: center;
+      
+      
+    }
+    
+  
+    
+
+    /* Responsive Styling */
+    @media screen and (max-width: 480px) {
+      .container {
+        
+        padding: 10px;
+      }
+     body{
+      background-size: cover;
+     }
+    
+    }
+
+    @media (min-width:1536px){
+      .container {
+        max-width: 700px;
+        padding: 40px;
+        box-shadow: 5px 5px 7px  rgba(142, 22, 164, 0.564); ;
+      }
+      label {
+
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      h1{
+        
+        font-size: 2.5rem;
+        font-weight: 700;
+        
+      }
+      /* .submit-button {
+      margin-top: 15px;
+      text-align: center;
+     
+    
+      
+    } */
+   
+
+    
+    
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Are you a Teacher or a Student?</h1>
+    <div class="form-group">
+      <label>
+        <input type="radio" name="option" value="student">
+        Student
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="radio" name="option" value="teacher">
+        Teacher
+      </label>
+    </div>
+    <div class="submit-button" >
+      <button id="btn" onclick="redirectToPage() " style="background-color:rgb(31, 169, 31); border-radius: 20px; height:2rem;width:6rem;border: none; ">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function redirectToPage() {
+      var selectedOption = document.querySelector('input[name="option"]:checked').value;
+      if (selectedOption === "teacher") {
+        window.location.href = "createfortecher.php";
+      } else if (selectedOption === "student") {
+        window.location.href = "firstname.html";
+      }
+    }
+  </script>
+</body>
+</html>
